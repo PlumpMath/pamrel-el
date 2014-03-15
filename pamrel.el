@@ -58,7 +58,17 @@
                  (url-hexify-string content)
                  (if language
                      (concat "&language=" (url-hexify-string language))))))
-    (url-retrieve pamrel-post-url (lambda (status) (switch-to-buffer (current-buffer))))))
+    (url-retrieve pamrel-post-url pamrel-after-post-callback-func)))
+
+(defun pamrel-after-post-callback (status)
+  "Open the url that we get back from pamrel and close the returned buffer"
+  (switch-to-buffer (current-buffer))
+  (end-of-buffer)
+  (previous-line)
+  (browse-url-at-point)
+  (kill-buffer (current-buffer)))
+
+(defvar pamrel-after-post-callback-func 'pamrel-after-post-callback)
 
 (defun pamrel-post-current-buffer ()
   "Post the entire contents of current buffer to pamrel"
