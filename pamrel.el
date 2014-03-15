@@ -38,4 +38,6 @@
   (interactive)
   (pamrel-post (buffer-string)))
 
-
+(defun pamrel-post-region (text-start text-end)
+  (interactive "r")
+  (pamrel-post (buffer-substring text-start text-end)))
