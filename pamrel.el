@@ -28,7 +28,7 @@
 (defvar pamrel-mode-language-map
   '((emacs-lisp-mode . "scheme")
     (python-mode . "python")
-    (hy-mode . "hy")
+    (hy-mode . "hylang")
     (conf-mode . "ini")
     (html-mode . "css+jinja")
     (web-mode . "css+jinja")))
