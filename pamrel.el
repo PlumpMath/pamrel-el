@@ -55,7 +55,8 @@
     (d-mode . "d")
     (scala-mode . "scala")
     (scala-mode2 . "scala")
-    (go-mode . "go")))
+    (go-mode . "go")
+    (rst-mode . "rst")))
 
 (defun pamrel-detect-language-from-major-mode ()
   "Get the current language by checking the pamrel-mode-language-map"
