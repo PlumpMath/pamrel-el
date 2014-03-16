@@ -48,7 +48,14 @@
     (prolog-mode . "prolog")
     (sh-mode . "bash")
     (tcl-mode . "tcl")
-    (xml-mode . "xml")))
+    (xml-mode . "xml")
+    (nxml-mode . "xml")
+    (haskell-mode . "haskell")
+    (clojure-mode . "clj")
+    (d-mode . "d")
+    (scala-mode . "scala")
+    (scala-mode2 . "scala")
+    (go-mode . "go")))
 
 (defun pamrel-detect-language-from-major-mode ()
   "Get the current language by checking the pamrel-mode-language-map"
