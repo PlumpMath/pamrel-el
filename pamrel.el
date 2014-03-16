@@ -37,6 +37,7 @@
     (common-lisp-mode . "common-lisp")
     (delphi-mode . "delphi")
     (diff-mode . "diff")
+    (magit-commit-mode . "diff")
     (fortran-mode . "fortran")
     (javascript-mode . "js")
     (perl-mode . "perl")
