@@ -38,6 +38,7 @@
     (delphi-mode . "delphi")
     (diff-mode . "diff")
     (magit-commit-mode . "diff")
+    (magit-diff-mode . "diff")
     (fortran-mode . "fortran")
     (javascript-mode . "js")
     (perl-mode . "perl")
