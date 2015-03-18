@@ -110,3 +110,6 @@
           (y-or-n-p "Really post region to pamrel?"))
       (pamrel-post (buffer-substring text-start text-end)
                    (pamrel-detect-language-meta-edition))))
+
+(provide 'pamrel)
+;;; pamrel.el ends here
