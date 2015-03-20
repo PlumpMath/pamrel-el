@@ -25,6 +25,8 @@
 (defvar pamrel-post-url "http://pamrel.lu/")
 (defvar pamrel-confirm-before-post t)
 
+;; Map of the language with the string identifier for pamrel
+;; this is the short name on http://pygments.org/docs/lexers/
 (defvar pamrel-mode-language-map
   '((emacs-lisp-mode . "scheme")
     (python-mode . "python")
@@ -54,10 +56,22 @@
     (haskell-mode . "haskell")
     (clojure-mode . "clj")
     (d-mode . "d")
+    (makefile-gmake-mode . "make")
     (scala-mode . "scala")
     (scala-mode2 . "scala")
     (go-mode . "go")
-    (rst-mode . "rst")))
+    (rst-mode . "rst")
+    (lua-mode . "lua")
+    (apache-mode . "apacheconf")
+    (vala-mode . "vala")
+    (nginx-mode . "nginx")
+    (yaml-mode . "yaml")
+    (brainfuck-mode . "brainfuck")
+    (coffee-mode . "coffee-script")
+    (dart-mode . "dart")
+    (rust-mode . "rust"))
+
+
 
 (defun pamrel-detect-language-from-major-mode ()
   "Get the current language by checking the pamrel-mode-language-map"
@@ -73,7 +87,6 @@
 
 ;; TODO: Add language determination based on buffer
 ;;       eg &language=python
-
 (defun pamrel-post (content &optional language)
   "Post CONTENT to pamrel pastebin"
   (let ((url-request-method "POST")
@@ -83,7 +96,7 @@
          (concat "content="
                  (url-hexify-string content)
                  (if language
-                     (concat "&language=" (url-hexify-string language))))))
+		     (concat "&language=" (url-hexify-string language))))))
     (url-retrieve pamrel-post-url pamrel-after-post-callback-func)))
 
 (defun pamrel-after-post-callback (status)
