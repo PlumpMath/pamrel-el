@@ -69,7 +69,7 @@
     (brainfuck-mode . "brainfuck")
     (coffee-mode . "coffee-script")
     (dart-mode . "dart")
-    (rust-mode . "rust"))
+    (rust-mode . "rust")))
 
 
 
